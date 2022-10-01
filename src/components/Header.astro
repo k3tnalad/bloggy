@@ -1,16 +1,15 @@
 ---
 import '../pages/main.css'
-
-
 ---
 
 
-<div class="font-dosis header flex justify-between items-center px-6 h-24 bg-gray-900 text-red-600 font-medium">
-    <section class="logo flex justify-center items-center gap-4">
-        <span class="text-2xl e">
+<header class="font-dosis flex justify-between items-center px-6 h-24 font-medium">
+    <a href="/">
+    <section class="text-2xl logo flex justify-center items-center gap-4 text-red-600">
+        <span>
             [Coff
         </span>
-        <div class="flex flex-col justify-center items-center text-red-600">
+        <div class="flex flex-col justify-center items-center">
             <span>
                 ee]
             </span>
@@ -22,7 +21,8 @@ import '../pages/main.css'
             </span>
         </div>	
     </section>
+    </a>
     <nav>
-        <a href="/blog">Blog</a>
+        <a class="text-gray-200 bg-slate-700 hover:bg-slate-300 hover:text-slate-700 px-3 py-1 text-xl" href="/about">about</a>
     </nav>
-</div>
+</header>
