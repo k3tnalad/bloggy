@@ -4,36 +4,38 @@ import './main.css';
 ---
 
 <Layout>
-    <div class="w-full h-auto py-14 font-dosis">
-        <div class="w-11/12 m-auto border-t-4 border-[#FA9500] border-b-2 py-4 flex flex-col gap-2 tracking-wide">
+    <section class="blog-container">
+        <div class="blogpost-card">
             <img src="/blogpost1.jpg" alt="blogpost pic">
-            <h2 class="text-2xl">Some kind of title</h2>
-            <small class="text-lg text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, in?</small>
-            <a class="p-2 bg-[#FA9500] text-[#1E1F20] text-center w-20" href="/">Read</a>
+            <h2>Some kind of title</h2>
+            <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, in?</small>
+            <a class="button" href="/">Read</a>
         </div>
-        <div class="w-11/12 m-auto border-t-4 border-[#FA9500] border-b-2 py-4 flex flex-col gap-2 tracking-wide">
-            <img src="/blogpost1.jpg" alt="blogpost pic">
-            <h2 class="text-2xl">Some kind of title</h2>
-            <small class="text-lg text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, in?</small>
-            <a class="p-2 bg-[#FA9500] text-[#1E1F20] text-center w-20" href="/">Read</a>
-        </div>
-        <div class="w-11/12 m-auto border-t-4 border-[#FA9500] border-b-2 py-4 flex flex-col gap-2 tracking-wide">
-            <img src="/blogpost1.jpg" alt="blogpost pic">
-            <h2 class="text-2xl">Some kind of title</h2>
-            <small class="text-lg text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, in?</small>
-            <a class="p-2 bg-[#FA9500] text-[#1E1F20] text-center w-20" href="/">Read</a>
-        </div>
-        <div class="w-11/12 m-auto border-t-4 border-[#FA9500] border-b-2 py-4 flex flex-col gap-2 tracking-wide">
-            <img src="/blogpost1.jpg" alt="blogpost pic">
-            <h2 class="text-2xl">Some kind of title</h2>
-            <small class="text-lg text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, in?</small>
-            <a class="p-2 bg-[#FA9500] text-[#1E1F20] text-center w-20" href="/">Read</a>
-        </div>
-        <div class="w-11/12 m-auto border-t-4 border-[#FA9500] border-b-2 py-4 flex flex-col gap-2 tracking-wide">
-            <img src="/blogpost1.jpg" alt="blogpost pic">
-            <h2 class="text-2xl">Some kind of title</h2>
-            <small class="text-lg text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, in?</small>
-            <a class="p-2 bg-[#FA9500] text-[#1E1F20] text-center w-20" href="/">Read</a>
-        </div>
-    </div>
+    </section>
 </Layout>
+
+<style lang="scss">
+    section.blog-container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        padding: 2em 0;
+    }
+    div.blogpost-card {
+        max-height: 30rem;
+        border-radius: 5px;
+        background-color: rgba(34, 51, 59, 0.3);
+        box-shadow: 2px -3px 8px -2px #28383f;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        gap: .4rem;
+        padding: 1rem;
+        small {
+            color: gray;
+        }
+    }
+</style>
+

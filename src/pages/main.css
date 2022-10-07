@@ -22,6 +22,19 @@ a {
     color: inherit;
 }
 
-a:hover {
-    color: var(--accent-color);
+a.button {
+    text-decoration: none;
+    color: inherit;
+    padding: .3em 1em;
+    background-color: #6f7378;
+}
+
+a.button:hover {
+    color: black;
+    background-color: var(--accent-color);
+}
+
+img {
+    max-width: 100%;
+    border-radius: 15px;
 }
