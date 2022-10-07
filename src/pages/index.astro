@@ -3,9 +3,28 @@ import Layout from '../layouts/Layout.astro';
 import './main.css';
 ---
 <Layout>
-	<main class="w-full h-full font-dosis px-6 flex flex-col justify-start items-center pt-16 gap-4">
-		<h1 class="text-center text-2xl font-medium">Hello, friend.</h1>
-		<p class="text-xl font-medium text-center">Not sure what you are doing here, but take a minute to check out this weirdly interesting blog.</p>
-		<a class="text-gray-200 bg-slate-700 hover:bg-slate-300 hover:text-slate-700 px-3 py-1 text-xl" href="/blog">blog</a>
+	<main>
+		<h1>Hello, friend.</h1>
+		<p>Not sure what you are doing here, but take a minute to check out this weirdly interesting blog.</p>
+		<div>
+			<a href="/blog">blog</a>
+		</div>
 	</main>
 </Layout>
+
+<style lang="scss">
+	main {
+		width: 100%;
+		height: auto;
+		h1, p {
+			text-align: center;
+			font-size: xx-large;
+			font-weight: 500;
+			margin-bottom: 1rem;
+		};
+		div {
+			display: grid;
+			place-items: center;
+		}
+	}
+</style>

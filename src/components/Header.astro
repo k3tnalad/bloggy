@@ -3,26 +3,55 @@ import '../pages/main.css'
 ---
 
 
-<header class="font-dosis flex justify-between items-center px-6 h-24 font-medium">
+<header>
     <a href="/">
-    <section class="text-2xl logo flex justify-center items-center gap-4 text-red-600">
-        <span>
-            [Coff
-        </span>
-        <div class="flex flex-col justify-center items-center">
+        <section class="text-2xl logo flex justify-center items-center gap-4 text-red-600">
             <span>
-                ee]
+                [Coff
             </span>
-            <span class="text-gray-400 text-sm">
-                in the
-            </span>
-            <span>	 
-                in]
-            </span>
-        </div>	
-    </section>
+            <div>
+                <span>
+                    ee]
+                </span>
+                <span class="gray">
+                    in the
+                </span>
+                <span>	 
+                    in]
+                </span>
+            </div>	
+        </section>
     </a>
     <nav>
-        <a class="text-gray-200 bg-slate-700 hover:bg-slate-300 hover:text-slate-700 px-3 py-1 text-xl" href="/about">about</a>
+        <a class="text-[#1E1F20] bg-[#FA9500] hover:bg-slate-300 hover:text-slate-700 px-3 py-1 text-xl" href="/about">about</a>
     </nav>
 </header>
+
+<style lang="scss">
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 4rem;
+        font-weight: 500;
+        padding: .5rem 1rem;
+        section {
+            font-size: x-large;
+            color: var(--text-logo);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: .5em;
+            div {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                span.gray {
+                    font-size: medium;
+                    color: #475569;
+                }
+            }
+        }
+    }
+</style>
