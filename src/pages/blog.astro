@@ -1,16 +1,24 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import './main.css';
+
+const posts = await Astro.glob('./posts/*.md');
 ---
 
 <Layout>
     <section class="blog-container">
-        <div class="blogpost-card">
-            <img src="/blogpost1.jpg" alt="blogpost pic">
-            <h2>Some kind of title</h2>
-            <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, in?</small>
-            <a class="button" href="/">Read</a>
-        </div>
+        <h1>THE BLOG</h1>
+        // TODO: LINKS TO THE POSTS
+        {posts.map(post => (
+            <div class="blogpost-card">
+                        <h2>{post.frontmatter.title}</h2>
+                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, in?</small>
+                        <div class="details">
+                            <span>{post.frontmatter.date}</span>
+                            <span>{post.frontmatter.author}</span>
+                        </div>
+            </div>
+        ))}
     </section>
 </Layout>
 
@@ -21,20 +29,52 @@ import './main.css';
         align-items: center;
         flex-direction: column;
         height: 100%;
-        padding: 2em 0;
+        width: 100%;
+        padding: 1em;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        // background-color: rgba(109, 194, 194, 0.511);
+        font-family: var(--content-font);
+        h1 {
+            margin: 1em 0;
+        }
+    } 
+
+    @media screen and (min-width: 600px) {
+    section.blog-container {
+        width: 60%;
+        margin-left: 20%;
     }
+}
+
     div.blogpost-card {
-        max-height: 30rem;
-        border-radius: 5px;
-        background-color: rgba(34, 51, 59, 0.3);
-        box-shadow: 2px -3px 8px -2px #28383f;
-        display: flex;
-        flex-direction: column;
-        justify-content: start;
-        gap: .4rem;
-        padding: 1rem;
-        small {
-            color: gray;
+        position: relative;
+        display: grid;
+        grid-template-rows: 40% 40% 10%;
+        padding: 1.6em;
+        min-height: 250px;
+        border-radius: 3px;
+        background-color: rgba(38, 40, 46, 0.872); /* Tint color */
+        line-height: 1.5;
+        width: 100%;
+        box-shadow: 3px 5px 10px black;
+        cursor: pointer;
+        div.details {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: smaller;
+        }
+        &:hover {
+            border-inline-start: 3px solid;
+            border-block-start: 3px solid;
+            border-image-source: radial-gradient(circle at top left, #BD1E1E, transparent 50%);
+            border-image-slice: 1;
+        }
+        h2 {
+            text-transform: uppercase;
+            padding-bottom: 2rem;
         }
     }
 </style>
