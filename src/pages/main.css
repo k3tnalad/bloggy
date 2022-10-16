@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500&family=Noto+Sans+Mono:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Nunito:wght@300;400;500&display=swap');
 
 
 *, *::after, *::before {
@@ -13,8 +13,8 @@
     --accent-color: #BD1E1E;
     --text-color: #fff;
     --text-logo: rgb(220 38 38);
-    --main-font: 'Dosis', sans-serif;
-    --content-font: 'Noto Sans Mono', monospace;
+    --main-font: 'Nunito', sans-serif;
+    --title-font: 'Major Mono Display', monospace;
 }
 
 a {

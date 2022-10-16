@@ -8,16 +8,17 @@ const posts = await Astro.glob('./posts/*.md');
 <Layout>
     <section class="blog-container">
         <h1>THE BLOG</h1>
-        // TODO: LINKS TO THE POSTS
         {posts.map(post => (
-            <div class="blogpost-card">
-                        <h2>{post.frontmatter.title}</h2>
-                        <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, in?</small>
-                        <div class="details">
-                            <span>{post.frontmatter.date}</span>
-                            <span>{post.frontmatter.author}</span>
-                        </div>
-            </div>
+            <a href={post.frontmatter.file}>
+                <div class="blogpost-card">
+                            <h2>{post.frontmatter.title}</h2>
+                            <small>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, in?</small>
+                            <div class="details">
+                                <span>{post.frontmatter.date}</span>
+                                <span>{post.frontmatter.author}</span>
+                            </div>
+                </div>
+            </a>
         ))}
     </section>
 </Layout>
