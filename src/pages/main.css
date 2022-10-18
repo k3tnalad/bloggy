@@ -17,6 +17,10 @@
     --title-font: 'Major Mono Display', monospace;
 }
 
+html {
+    background-color: var(--bg-color-dark);
+}
+
 a {
     text-decoration: none;
     color: inherit;
