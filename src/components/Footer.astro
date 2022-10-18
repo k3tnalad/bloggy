@@ -1,11 +1,16 @@
 ---
 import '../pages/main.css'
+const date = new Date().getFullYear();
+const name = 'k3tna_'
 ---
 
 <footer>
     <div>
-        <a href="https://github.com/k3tnalad"><img src="/icons8-github.svg" alt="github icon"></a>
-        <a href="https://twitter.com/k3tna_"><img src="/icons8-twitter.svg" alt="twitter icon"></a>
+        <h5>Copyright © {date} {name}. All rights reserved.</h5>
+        <span>
+            <a href="https://github.com/k3tnalad"><img src="/icons8-github.svg" alt="github icon"></a>
+            <a href="https://twitter.com/k3tna_"><img src="/icons8-twitter.svg" alt="twitter icon"></a>
+        </span>
     </div>
 </footer>
 
@@ -21,5 +26,7 @@ import '../pages/main.css'
         justify-content: center;
         align-items: center;
         gap: 1rem;
+        flex-wrap: wrap;
+        font-weight: lighter;
     }
 </style>
